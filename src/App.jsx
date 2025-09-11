@@ -1,24 +1,12 @@
 import "./App.css";
+import { Header } from "./componentes/HeaderComponents/Header";
 
 function App() {
   return (
     <div>
       {/* Header Pag */}
       <div>
-        <nav></nav>
-      </div>
-
-      {/* Slider y ofertas */}
-      <div>
-        {/* contenido slider/ofertas */}
-        <div>
-          contenido
-        </div>
-      </div>
-
-      {/* Barra Buscar  */}
-      <div>
-        Barra Busqueda
+        <Header></Header>
       </div>
 
     </div>
