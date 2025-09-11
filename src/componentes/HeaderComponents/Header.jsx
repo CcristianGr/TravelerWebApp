@@ -35,16 +35,21 @@ export const Header = () => {
           alt=""
           className="w-full h-full brightness-40"
         />
-        <div className="flex w-300 h-full text-center items-center text-white justify-center absolute">
+        <div className="flex w-full h-full text-center items-center text-white justify-center absolute">
           <div className="flex flex-col w-1/3">
-            <p className="text-xl">Tours & TRAVEL</p>
-            <p className="text-4xl">Discover Amazing Places With Us</p>
-            <div>
-              <button className="text-black">Book Now</button>
+            <p className="text-2xl font-[600] mb-5">TOURS & TRAVEL</p>
+            <p className="text-6xl font-[1000] mb-5">
+              Discover Amazing Places With Us
+            </p>
+            <div className="mt-3">
+              <button className="bg-green-400 text-black w-35 h-12">
+                Book Now
+              </button>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   );
 };
