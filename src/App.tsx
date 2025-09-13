@@ -7,7 +7,7 @@ function App() {
     <div>
       {/* Header Pag */}
       <div>
-        {/* <Header label="Let's Discover Amazing Places"/> */}
+        <Header label="Let's Discover Amazing Places"/>
         <Cards/>
       </div>
 
