@@ -1,8 +1,41 @@
-type HeaderProps = {
-  label: string;
+import { Link } from "react-router-dom";
+
+type HeaderParams = {
+  labelS?: string;
+  labelB: string;
+  labelM?: string;
+  button: number;
 };
 
-export const Header = ({ label }: HeaderProps) => {
+type HeaderProps = {
+  params: HeaderParams;
+};
+
+type ParamsPintar ={
+  isHome: number;
+  text: string;
+}
+
+function pintarBoton(params:ParamsPintar) {
+  console.log(params)
+  switch (params.isHome) {
+    case 0:
+      return (
+        <div>{params.text}</div>
+      )
+    case 1:
+      return (
+        <div className="mt-3">
+          <button className="bg-primary w-40 h-16">Book Now</button>
+        </div>
+      )
+
+    default:
+      return null
+  }
+}
+
+export const Header = ({ params }: HeaderProps) => {
   return (
     <div className="flex flex-col w-full">
 
@@ -16,17 +49,15 @@ export const Header = ({ label }: HeaderProps) => {
         <div className="w-1/3 text-end">F T Lin Ins You </div>
       </div>
 
-      <div className="flex m-5 absolute top-11 z-1 bg-white left-1/2 -translate-x-1/2 w-1/2 h-20  items-center">
+      <div className="flex absolute top-20 z-1 bg-white left-1/2 -translate-x-1/2 w-1/2 h-20  items-center">
         <nav className="h-16 flex w-full justify-between items-center pl-10">
           <div className="pl-5 text-3xl font-[1000]">
             TRAVEL<span className="text-primary">ERS</span>
           </div>
           <div className="">
-            <div className="pl-5 flex gap-5 text-2xl pr-10">
-              <a href="#" className="text-primary">
-                Home
-              </a>
-              <a href="#">About</a>
+            <div className="pl-5 flex gap-5 text-xl pr-10">
+              <Link to="/" className="text-primary">Home</Link>
+              <Link to="/about">About</Link>
               <a href="#">Services</a>
               <a href="#">Tour Packages</a>
               <a href="#">Pages</a>
@@ -36,19 +67,13 @@ export const Header = ({ label }: HeaderProps) => {
         </nav>
       </div>
 
-      <div className="flex justify-center w-full mt-20 ">
-        <img
-          src="src/assets/HeaderAssets/carousel-2.jpg"
-          alt=""
-          className="w-full h-full brightness-40"
-        />
-        <div className="flex w-full h-full text-center items-center text-white justify-center absolute">
-          <div className="flex flex-col w-400">
-            <p className="text-2xl font-[600] mb-1">TOURS & TRAVEL</p>
-            <p className="text-9xl font-[1000] mb-5">{label}</p>
-            <div className="mt-3">
-              <button className="bg-primary w-40 h-16">Book Now</button>
-            </div>
+      <div className="relative flex justify-center w-full h-125 mt-20 bg-[url('/src/assets/HeaderAssets/carousel-2.jpg')] bg-cover">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50"></div>
+        <div className="relative flex w-full h-full text-center items-center text-white justify-center">
+          <div className="flex flex-col w-300">
+            <p className="text-2xl font-[600] mb-1">{params.labelS}</p>
+            <p className="text-8xl font-[1000] mb-5">{params.labelB}</p>
+            {pintarBoton({ isHome: params.button, text: params.labelM ?? "" })}
           </div>
         </div>
       </div>

@@ -1,17 +1,17 @@
 import "./App.css";
-import { Header } from "./componentes/HeaderComponents/Header";
-import { Cards } from "./componentes/BodyComponents/Cards";
+import { Routes, Route, Link } from "react-router-dom";
+import { HomePage } from "./componentes/Pages/Home";
+import { AboutPage } from "./componentes/Pages/About";
+
 
 function App() {
   return (
-    <div>
-      {/* Header Pag */}
-      <div>
-        {/* <Header label="Let's Discover Amazing Places"/> */}
-        <Cards/>
-      </div>
-
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/About" element={<AboutPage/>}/>
+      </Routes>
+    </>
   );
 }
 

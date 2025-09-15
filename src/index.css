@@ -10,6 +10,26 @@
   --color-headings: #212121;
 }
 
+@layer components {
+  .bg-image-with-filter {
+    position: relative;
+  }
+
+  .bg-image-with-filter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    z-index: -1; 
+  }
+}
+
 :root {
   font-family: Poppins;
   line-height: 1.5;
