@@ -17,9 +17,32 @@ export const HomePage = () => {
             }
             setLoading(false);
         });
-        postComment({ name: 'sup', email: 'anothersup@gmail.com' })
-          .then(res => console.log('Respuesta POST:', res))
-          .catch(err => console.error('Error POST:', err));
+        postComment(
+            { 
+                id: "1",
+                name: "Hola",
+                username: "Patossd",
+                email: "Patossd@gmail.com",
+                address:{
+                    street: "string",
+                    suite: "string",
+                    city: "string",
+                    zipcode: "string",
+                    geo: {
+                        lat: "string",
+                        lng: "string",
+                    }
+                },
+                phone: "string",
+                website: "string",
+                company: {
+                    name: "string",
+                    cathPhrase: "string",
+                    bs: "string",
+                }
+            }
+        ).then(res => console.log('Respuesta POST:', res))
+        .catch(err => console.error('Error POST:', err));
     }, []);
 
     return (
@@ -30,6 +53,7 @@ export const HomePage = () => {
                         labelS: "Tours & Travel",
                         labelB: "Discover Amazing Places With Us",
                         button: 1,
+                        rem:"60rem"
                     }}
                 />
                 <div>
