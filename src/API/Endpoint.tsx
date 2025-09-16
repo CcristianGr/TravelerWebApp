@@ -27,7 +27,7 @@ type postUsuario = {
 const API_BASE_URL = import.meta.env.VITE_API_JSON_PLACEHOLDER;
 
 export async function getPostActiveCloseArea() {
-  const response = await axios.get(`${API_BASE_URL}/comments`);
+  const response = await axios.get(`${API_BASE_URL}/comments/1`);
   return response.data;
 }
 

@@ -1,33 +1,15 @@
 @import "tailwindcss";
+@import "tailwindcss-animated";
 
 @theme {
   --color-primary: #7AB730;
-  --color-secondary: #bde396; 
+  --color-secondary: #bde396;
+  --color-hover-p: #5f8f25; 
   --color-light: #FFFFFF;
   --color-dark: #212121;
   --color-body-bg: #F3F3F3;
   --color-body-text: #656565;
   --color-headings: #212121;
-}
-
-@layer components {
-  .bg-image-with-filter {
-    position: relative;
-  }
-
-  .bg-image-with-filter::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: inherit;
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.5);
-    z-index: -1; 
-  }
 }
 
 :root {
