@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { NavLinkActive } from "./Hook/HeaderHook";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-library.add(fab)
+import { fab, faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
+library.add(fab, faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube)
 
 type HeaderParams = {
   labelS?: string;
@@ -22,7 +23,6 @@ type ParamsPintar = {
 }
 
 function pintarBoton(params: ParamsPintar) {
-  console.log(params)
   switch (params.isHome) {
     case 0:
       return (
@@ -31,10 +31,9 @@ function pintarBoton(params: ParamsPintar) {
     case 1:
       return (
         <div className="mt-3">
-          <button className="bg-primary w-40 h-16">Book Now</button>
+          <button className="bg-primary w-40 h-16 hover:cursor-pointer hover:bg-secondary">Book Now</button>
         </div>
       )
-
     default:
       return null
   }
@@ -44,37 +43,37 @@ export const Header = ({ params }: HeaderProps) => {
   return (
     <div className="flex flex-col w-full justify-center items-center">
 
-      <div className="flex flex-col mt-5 relative w-6xl lg:max-w-4xl md:max-w-3xl ">
-        
-        <div className="flex w-full justify-between absolute">
+      <div className="flex flex-col mt-5 relative w-6xl lg:max-w-4xl md:max-w-3xl xl:max-w-5xl group">
+
+        <div className="flex w-full justify-between">
           <div className="w-full *:text-body-text text-body-text flex">
             <span className="material-symbols-outlined">mail</span>
             info@example.com |
             <span className="material-symbols-outlined">call</span>
             +012 345 6789
           </div>
-          <div className='flex gap-5'>
-            <FontAwesomeIcon icon="fa-brands fa-facebook-f" />
-            <FontAwesomeIcon icon="fa-brands fa-x-twitter" />
-            <FontAwesomeIcon icon="fa-brands fa-linkedin-in" />
-            <FontAwesomeIcon icon="fa-brands fa-instagram" />
-            <FontAwesomeIcon icon="fa-brands fa-youtube" />
+          <div className='flex gap-5 *:cursor-pointer *:text-primary *:hover:text-green-700'>
+            <FontAwesomeIcon icon={faFacebookF} />
+            <FontAwesomeIcon icon={faXTwitter} />
+            <FontAwesomeIcon icon={faLinkedinIn} />
+            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faYoutube} />
           </div>
         </div>
 
-        <div className="flex z-1 w-full h-20 items-center relative">
-          <nav className="h-20 flex w-full justify-between items-center pl-10 bg-white absolute top-10 md:text-sm">
+        <div className="flex z-1 w-full h-10 items-center relative mt-4">
+          <nav className="h-20 flex w-full justify-between items-center pl-10 bg-white absolute top-0 md:text-sm">
             <div className="text-3xl font-[1000]">
               TRAVEL<span className="text-primary">ERS</span>
             </div>
             <div className="">
               <div className="pl-5 flex gap-5 text-xl pr-10 -xl:text-sm">
-                <Link to="/" className="text-primary">Home</Link>
-                <Link to="/about">About</Link>
-                <a href="#">Services</a>
-                <a href="#">Tour Packages</a>
-                <a href="#">Pages</a>
-                <a href="#">Contact</a>
+                <NavLinkActive to="/">Home</NavLinkActive>
+                <NavLinkActive to="/about">About</NavLinkActive>
+                <NavLinkActive to="/services">Services</NavLinkActive>
+                <NavLinkActive to="/tour-packages">Tour Packages</NavLinkActive>
+                <NavLinkActive to="/pages">Pages</NavLinkActive>
+                <NavLinkActive to="/contact">Contact</NavLinkActive>
               </div>
             </div>
           </nav>
@@ -92,7 +91,7 @@ export const Header = ({ params }: HeaderProps) => {
         </div>
       </div>
 
-      <div className="bg-white h-24 relative bottom-12 w-7xl lg:max-w-4xl md:max-w-3xl flex items-center justify-center">
+      <div className="bg-white h-24 relative bottom-12 w-6xl lg:max-w-4xl md:max-w-3xl xl:max-w-5xl flex items-center justify-center">
         <div className="*:border *:border-gray-300 *:m-2 *:w-[18%] w-[90%] *:h-10">
           <select name="" id="" className="">
             <option value="" >Destination</option>

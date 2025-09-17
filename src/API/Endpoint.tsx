@@ -24,6 +24,14 @@ type postUsuario = {
     };
 }
 
+type comentario = {
+  postId:number;
+  id:number;
+  name: string;
+  email:string;
+  body:string
+}
+
 const API_BASE_URL = import.meta.env.VITE_API_JSON_PLACEHOLDER;
 
 export async function getPostActiveCloseArea() {
@@ -31,8 +39,15 @@ export async function getPostActiveCloseArea() {
   return response.data;
 }
 
-export async function postComment(data:postUsuario) {
+export async function postUser(data:postUsuario) {
   const response = await axios.post(`${API_BASE_URL}/users`, data);
   return response.data;
 }
+
+export async function postComentario(data:comentario) {
+  const response = await axios.post(`${API_BASE_URL}/comments`, data);
+  return response.data;
+}
+
+
  

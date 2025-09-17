@@ -12,15 +12,15 @@ export const Cards = () => {
   ]
   return (
     <>
-      <div className='flex flex-col justify-center items-center'>
+      <div className='flex flex-col justify-center items-center  '>
         <p className='text-primary mt-10 text-xl tracking-[4px]'>SERVICES</p>
         <p className='text-4xl font-[800]'>Tours & Travel Services</p>
-        <section className='flex flex-wrap w-full justify-center mt-4'>
+        <section className='flex flex-wrap justify-center mt-4 w-6xl lg:max-w-4xl md:max-w-3xl xl:max-w-5xl'>
           {
             Card_content.map((obj, index) => {
               return (
                 <>
-                  <div className='group flex flex-col flex-wrap w-70 h-70 p-5 mx-4 justify-center items-center text-center bg-white transition delay-75 duration-150 hover:shadow-2xl'>
+                  <div className='group flex flex-col flex-wrap w-70 h-70 p-5 mx-auto justify-center items-center text-center bg-white transition delay-75 duration-150 hover:shadow-2xl'>
                     <FontAwesomeIcon icon={obj.icon} className='border border-primary p-4 text-3xl mb-5 text-primary group-hover:bg-primary group-hover:text-white transition delay-75 duration-150' />
                     <p className='mb-1'><strong>{obj.Title}</strong></p>
                     <p className='text-body-text'>{obj.Description}</p>

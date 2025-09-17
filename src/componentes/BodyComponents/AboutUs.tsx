@@ -14,7 +14,7 @@ export const AboutUs = () => {
     return (
         <>
             <div className="flex flex-col w-full justify-center items-center ">
-                <div className="flex flex-row w-6xl items-center lg:max-w-4xl md:max-w-3xl">
+                <div className="flex flex-row items-center w-6xl lg:max-w-4xl md:max-w-3xl xl:max-w-5xl">
                     <div className="relative size-150">
                         <img src="src/assets/BodyAssets/about.jpg" className="absolute w-full h-full" />
                     </div>
@@ -39,7 +39,7 @@ export const AboutUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row -6xl lg:max-w-4xl md:max-w-3xl mt-10 h-20">
+                <div className="flex flex-row w-6xl lg:max-w-4xl md:max-w-3xl xl:max-w-5xl mt-10 h-20">
                     {
                         data.map((datas, index) => (
                             <>
