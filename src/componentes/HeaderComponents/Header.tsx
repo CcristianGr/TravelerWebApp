@@ -85,7 +85,7 @@ export const Header = ({ params }: HeaderProps) => {
         <div className="relative flex w-full h-full text-center items-center text-white justify-center">
           <div className="flex flex-col w-300">
             <p className="text-2xl font-[600] mb-1">{params.labelS}</p>
-            <p className="text-8xl font-[600] mb-5">{params.labelB}</p>
+            <p className="text-7xl font-[600] mb-5">{params.labelB}</p>
             {pintarBoton({ isHome: params.button, text: params.labelM ?? "" })}
           </div>
         </div>
