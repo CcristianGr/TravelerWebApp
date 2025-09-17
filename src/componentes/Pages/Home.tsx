@@ -1,5 +1,5 @@
 import { Header } from "./../HeaderComponents/Header"
-import { getPostActiveCloseArea,postComment } from "../../API/Endpoint"
+import { getPostActiveCloseArea,postUser } from "../../API/Endpoint"
 import { useEffect, useState } from "react";
 import { AboutUs } from "../BodyComponents/AboutUs"
 import { Cards } from "../BodyComponents/Cards";
@@ -19,7 +19,7 @@ export const HomePage = () => {
             }
             setLoading(false);
         });
-        postComment(
+        postUser(
             { 
                 id: "1",
                 name: "Hola",
