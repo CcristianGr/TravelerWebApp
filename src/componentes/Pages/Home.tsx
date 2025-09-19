@@ -1,5 +1,5 @@
 import { Header } from "./../HeaderComponents/Header"
-import { getPostActiveCloseArea,postUser,getMessage } from "../../API/Endpoint"
+import { getPostActiveCloseArea, postUser } from "../../api/Endpoint"
 import { useEffect, useState } from "react";
 import { AboutUs } from "../BodyComponents/AboutUs"
 import { Cards } from "../BodyComponents/Cards";
@@ -21,12 +21,12 @@ export const HomePage = () => {
             setLoading(false);
         });
         postUser(
-            { 
+            {
                 id: "1",
                 name: "Hola",
                 username: "Patossd",
                 email: "Patossd@gmail.com",
-                address:{
+                address: {
                     street: "string",
                     suite: "string",
                     city: "string",
@@ -45,43 +45,38 @@ export const HomePage = () => {
                 }
             }
         ).then(res => console.log('Respuesta POST:', res))
-        .catch(err => console.error('Error POST:', err));
+            .catch(err => console.error('Error POST:', err));
     }, []);
 
     return (
-        <>
+        <div>
+            <Header
+                params={{
+                    labelS: "Tours & Travel",
+                    labelB: "Discover Amazing Places With Us",
+                    button: 1,
+                    rem: "60rem"
+                }}
+            />
             <div>
-                <Header
-                    params={{
-                        labelS: "Tours & Travel",
-                        labelB: "Discover Amazing Places With Us",
-                        button: 1,
-                        rem:"60rem"
-                    }}
-                />
-                <div>
-                    {
-                        loading ? (
-                            <p>Cargando...</p>
-                        ) : (
-                            <div className="flex flex-row flex-wrap">
-                                {posts.map((post, idx) => (
-                                    <>
-                                        {/* <li key={idx}>{JSON.stringify(post)}</li> */}
-                                        <div id={JSON.stringify(post.postId)} key={idx} className="w-60 h-40 flex flex-col bg-white gap-5 m-5">
-                                            <p>Nombre: {JSON.stringify(post.name)}</p>
-                                            <p>Email: {JSON.stringify(post.email)}</p>
-                                        </div>
-                                    </>
-                                ))}
-                            </div>
-                        )
-                    }
-                </div>
-                <AboutUs/>
-                <Cards/>
-                <FooterCom/>
+                {
+                    loading ? (
+                        <p>Cargando...</p>
+                    ) : (
+                        <div className="flex flex-row flex-wrap">
+                            {posts.map((post) => (
+                                <div id={JSON.stringify(post.postId)} key={post.id} className="w-60 h-40 flex flex-col bg-white gap-5 m-5">
+                                    <p>Nombre: {JSON.stringify(post.name)}</p>
+                                    <p>Email: {JSON.stringify(post.email)}</p>
+                                </div>
+                            ))}
+                        </div>
+                    )
+                }
             </div>
-        </>
+            <AboutUs />
+            <Cards />
+            <FooterCom />
+        </div>
     );
 };

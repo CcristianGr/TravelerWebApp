@@ -1,7 +1,7 @@
-import { Header } from "../../HeaderComponents/Header"
-import { SideBar } from "../../BodyComponents/SideBar"
-import { DisplayPost } from "../../BodyComponents/PostDisplay"
-import { FooterCom } from "../../FooterComponents/Footer"
+import { Header } from "../../componentes/HeaderComponents/Header"
+import { SideBar } from "./SideBar"
+import { DisplayPost } from "./PostDisplay"
+import { FooterCom } from "../../componentes/FooterComponents/Footer"
 
 export const BlogGrid = () => {
     return (

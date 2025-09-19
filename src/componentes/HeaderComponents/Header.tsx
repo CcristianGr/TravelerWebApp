@@ -1,4 +1,3 @@
-import { Link, useLocation } from "react-router-dom";
 import { NavLinkActive } from "../Hook/HeaderHook";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -47,10 +46,7 @@ export const Header = ({ params }: HeaderProps) => {
 
         <div className="flex w-full justify-between">
           <div className="w-full *:text-body-text text-body-text flex">
-            <span className="material-symbols-outlined">mail</span>
-            info@example.com |
-            <span className="material-symbols-outlined">call</span>
-            +012 345 6789
+            <span className="material-symbols-outlined">mail</span> info@example.com | <span className="material-symbols-outlined">call</span> +012 345 6789
           </div>
           <div className='flex gap-5 *:cursor-pointer *:text-primary *:hover:text-green-700'>
             <FontAwesomeIcon icon={faFacebookF} />
@@ -70,9 +66,9 @@ export const Header = ({ params }: HeaderProps) => {
               <div className="pl-5 flex gap-5 text-xl pr-10 -xl:text-sm">
                 <NavLinkActive to="/">Home</NavLinkActive>
                 <NavLinkActive to="/about">About</NavLinkActive>
-                <NavLinkActive to="/services">Services</NavLinkActive>
-                <NavLinkActive to="/tour-packages">Tour Packages</NavLinkActive>
-                <NavLinkActive to="/pages">Pages</NavLinkActive>
+                <NavLinkActive to="/NoService">Services</NavLinkActive>
+                <NavLinkActive to="/NoService">Tour Packages</NavLinkActive>
+                <NavLinkActive to="/NoService">Pages</NavLinkActive>
                 <NavLinkActive to="/contact">Contact</NavLinkActive>
               </div>
             </div>

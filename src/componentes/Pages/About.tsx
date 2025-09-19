@@ -1,4 +1,3 @@
-import { Cards } from "../BodyComponents/Cards"
 import { Header } from "../HeaderComponents/Header"
 import { AboutUs } from "../BodyComponents/AboutUs"
 import { TravGuides } from "../BodyComponents/TravelGuides"

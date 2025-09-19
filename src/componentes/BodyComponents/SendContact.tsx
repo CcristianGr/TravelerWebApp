@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { postComentario } from "../../API/Endpoint"
+import { postComentario } from "../../api/Endpoint"
 import { useNavigate } from 'react-router-dom';
 
 export const SendContact = () => {
