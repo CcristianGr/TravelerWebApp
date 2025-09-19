@@ -11,10 +11,10 @@ export const AboutUs = () => {
     return (
         <div className="flex flex-col w-full justify-center items-center ">
             <div className="flex flex-row items-center w-6xl lg:max-w-4xl md:max-w-3xl xl:max-w-5xl">
-                <div className="relative size-150">
+                <div className="relative h-150 w-130">
                     <img src="src/assets/BodyAssets/about.jpg" className="absolute w-full h-full" alt='About' />
                 </div>
-                <div className="bg-white w-180 h-110 p-8 md:text-sm -ml-20 z-1">
+                <div className="bg-white w-180 h-115 p-8 md:text-sm -ml-20 z-1">
                     <p className="text-primary tracking-[4px]">ABOUT US</p>
                     <p className="text-3xl">
                         <strong>
@@ -30,7 +30,7 @@ export const AboutUs = () => {
                             <img src="src/assets/BodyAssets/about-2.jpg" alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>
-                    <div className="mt-6 h-10 ">
+                    <div className="mt-4 h-10 ">
                         <button className="bg-primary w-1/4 h-full text-white hover:bg-hover-p cursor-pointer">Book Now</button>
                     </div>
                 </div>

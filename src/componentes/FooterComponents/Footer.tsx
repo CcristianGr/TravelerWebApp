@@ -7,7 +7,7 @@ library.add(fab, faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube, 
 export const FooterCom = () => {
 
     return (
-        <div className="grid grid-cols-4 grid-rows-[80%_20%] w-full h-150 bg-[#212121] text-white mt-40 p-15 *:p-5 *:flex *:flex-col *:justify-start">
+        <div className="grid grid-cols-4 w-full h-100 bg-[#212121] text-white mt-40 p-15 *:p-5 *:flex *:flex-col *:justify-start">
             <div className="justify-center">
                 <div className="text-[30px] font-[700] text-white w-full tracking-[3px]">
                     TRAVEL<span className="text-primary">ER</span>
