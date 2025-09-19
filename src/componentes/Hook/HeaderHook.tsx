@@ -13,8 +13,7 @@ export const NavLinkActive = ({ to, children, className = "" }: NavLinkActivePro
   return (
     <Link
       to={to}
-      className={`${isActive ? "text-primary" : "text-black hover:text-primary"} ${className}`}
-    >
+      className={`${isActive ? "text-primary" : "text-black hover:text-primary"} ${className}`}>
       {children}
     </Link>
   );

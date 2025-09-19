@@ -1,42 +1,8 @@
 import { NavLinkActive } from "../Hook/HeaderHook";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab, faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
-library.add(fab, faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube)
-
-type HeaderParams = {
-  labelS?: string;
-  labelB: string;
-  labelM?: string;
-  button: number;
-  rem: string;
-};
-
-type HeaderProps = {
-  params: HeaderParams;
-};
-
-type ParamsPintar = {
-  isHome: number;
-  text: string;
-}
-
-function pintarBoton(params: ParamsPintar) {
-  switch (params.isHome) {
-    case 0:
-      return (
-        <div>{params.text}</div>
-      )
-    case 1:
-      return (
-        <div className="mt-3">
-          <button className="bg-primary w-40 h-16 hover:cursor-pointer hover:bg-secondary">Book Now</button>
-        </div>
-      )
-    default:
-      return null
-  }
-}
+import { faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { pintarBoton } from "../Hook/HooksGenerals";
+import { HeaderProps } from "../Hook/TypeAtributos/types";
 
 export const Header = ({ params }: HeaderProps) => {
   return (
@@ -68,7 +34,7 @@ export const Header = ({ params }: HeaderProps) => {
                 <NavLinkActive to="/about">About</NavLinkActive>
                 <NavLinkActive to="/NoService">Services</NavLinkActive>
                 <NavLinkActive to="/NoService">Tour Packages</NavLinkActive>
-                <NavLinkActive to="/NoService">Pages</NavLinkActive>
+                <NavLinkActive to="/BlogGrid">Blog</NavLinkActive>
                 <NavLinkActive to="/contact">Contact</NavLinkActive>
               </div>
             </div>

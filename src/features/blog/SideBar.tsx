@@ -1,4 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 export const SideBar = () => {
     const categorias = [
@@ -8,7 +10,7 @@ export const SideBar = () => {
         { id:4,categ: "Keyword Research", post: "56" },
         { id:5,categ: "Email Marketing", post: "98" },
     ]
-    
+
     const RecentPost = [
         {idpost:1 ,img: "src/assets/BodyAssets/blog-100x100.jpg", titlepost: "Diam loren dolore justo eirmod lorem dolore", date: "Jan 01, 2050" },
         {idpost:2 ,img: "src/assets/BodyAssets/blog-100x100.jpg", titlepost: "Diam loren dolore justo eirmod lorem dolore", date: "Jan 01, 2050" },

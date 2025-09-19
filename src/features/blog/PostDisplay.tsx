@@ -24,9 +24,9 @@ export const DisplayPost = () => {
                                 <small className="text-white font-[600] text-[12px] h-5">{p.month}</small>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center p-4 ">
-                            <p className="text-primary *:hover:cursor-pointer "> <span>{p.who}</span> | <span>{p.title}</span> </p>
-                            <p className="font-[600]"> {p.description} </p>
+                        <div className="flex flex-col justify-center p-4">
+                            <p className="text-primary *:hover:cursor-pointer *:hover:underline"> <a href="/">{p.who}</a> | <a href="/">{p.title}</a> </p>
+                            <a className="font-[600] hover:cursor-pointer hover:underline" href="/"> {p.description} </a>
                         </div>
                     </div>
                 ))

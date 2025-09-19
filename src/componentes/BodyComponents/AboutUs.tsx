@@ -1,8 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHotel, faMedal, faMoneyCheckDollar, fas } from '@fortawesome/free-solid-svg-icons'
-library.add(fas)
-
+import { faHotel, faMedal, faMoneyCheckDollar } from '@fortawesome/free-solid-svg-icons'
 
 
 export const AboutUs = () => {

@@ -18,7 +18,7 @@ export const Cards = () => {
         {
           Card_content.map((obj, index) => {
             return (
-              <div key={obj.idcard}  className='group flex flex-col flex-wrap w-70 h-70 p-5 mx-auto justify-center items-center text-center bg-white transition delay-75 duration-150 hover:shadow-2xl'>
+              <div key={obj.idcard} className='group flex flex-col flex-wrap w-70 h-70 p-5 mx-auto justify-center items-center text-center bg-white transition delay-75 duration-150 hover:shadow-2xl'>
                 <FontAwesomeIcon icon={obj.icon} className='border border-primary p-4 text-3xl mb-5 text-primary group-hover:bg-primary group-hover:text-white transition delay-75 duration-150' />
                 <p className='mb-1'><strong>{obj.Title}</strong></p>
                 <p className='text-body-text'>{obj.Description}</p>
