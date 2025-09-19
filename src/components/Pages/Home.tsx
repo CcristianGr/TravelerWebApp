@@ -1,4 +1,4 @@
-import { Header } from "./../HeaderComponents/Header"
+import { Header } from "../HeaderComponents/Header"
 import { getPostActiveCloseArea, postUser } from "../../api/Endpoint"
 import { useEffect, useState } from "react";
 import { AboutUs } from "../BodyComponents/AboutUs"

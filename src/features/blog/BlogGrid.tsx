@@ -1,7 +1,7 @@
-import { Header } from "../../componentes/HeaderComponents/Header"
+import { Header } from "../../components/HeaderComponents/Header"
 import { SideBar } from "./SideBar"
 import { DisplayPost } from "./PostDisplay"
-import { FooterCom } from "../../componentes/FooterComponents/Footer"
+import { FooterCom } from "../../components/FooterComponents/Footer"
 
 export const BlogGrid = () => {
     return (

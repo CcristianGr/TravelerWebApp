@@ -31,6 +31,7 @@ export const SendContact = () => {
         })
             .then(res => {
                 alert("Correo Enviado")
+                console.log(res)
                 navigate("/")
             })
             .catch(err => console.error('Error POST:', err));

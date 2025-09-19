@@ -1,10 +1,10 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { HomePage } from "./componentes/Pages/Home";
-import { AboutPage } from "./componentes/Pages/About";
-import { ContactUs } from "./componentes/Pages/Contact";
+import { HomePage } from "./components/Pages/Home";
+import { AboutPage } from "./components/Pages/About";
+import { ContactUs } from "./components/Pages/Contact";
 import { BlogGrid } from "./features/blog/BlogGrid";
-import { OutOfService } from "./componentes/Pages/OutOfService";
+import { OutOfService } from "./components/Pages/OutOfService";
 
 function App() {
   return (
