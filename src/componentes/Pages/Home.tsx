@@ -1,8 +1,9 @@
 import { Header } from "./../HeaderComponents/Header"
-import { getPostActiveCloseArea,postUser } from "../../API/Endpoint"
+import { getPostActiveCloseArea,postUser,getMessage } from "../../API/Endpoint"
 import { useEffect, useState } from "react";
 import { AboutUs } from "../BodyComponents/AboutUs"
 import { Cards } from "../BodyComponents/Cards";
+import { FooterCom } from "../FooterComponents/Footer";
 
 export const HomePage = () => {
     const [posts, setPosts] = useState<any[]>([]);
@@ -79,6 +80,7 @@ export const HomePage = () => {
                 </div>
                 <AboutUs/>
                 <Cards/>
+                <FooterCom/>
             </div>
         </>
     );

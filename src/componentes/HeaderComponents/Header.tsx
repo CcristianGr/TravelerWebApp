@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { NavLinkActive } from "./Hook/HeaderHook";
+import { NavLinkActive } from "../Hook/HeaderHook";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab, faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
@@ -83,7 +83,7 @@ export const Header = ({ params }: HeaderProps) => {
       <div className="relative flex justify-center w-full h-250 bg-[url('/src/assets/HeaderAssets/carousel-2.jpg')] bg-cover" style={{ height: params.rem }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50"></div>
         <div className="relative flex w-full h-full text-center items-center text-white justify-center">
-          <div className="flex flex-col w-300">
+          <div className="flex flex-col w-250">
             <p className="text-2xl font-[600] mb-1">{params.labelS}</p>
             <p className="text-7xl font-[600] mb-5">{params.labelB}</p>
             {pintarBoton({ isHome: params.button, text: params.labelM ?? "" })}
