@@ -17,7 +17,7 @@ export const Header = ({ label }: HeaderProps) => {
 
           <div className="w-full *:text-body-text text-body-text flex">
             <span className="material-symbols-outlined">mail</span>
-            info@example.com |
+            info@example.co |
             <span className="material-symbols-outlined">call</span>
             +012 345 6789
           </div>
