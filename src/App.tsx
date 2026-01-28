@@ -11,8 +11,8 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/NoService" element={<OutOfService />} />
-      <Route path="/About" element={<AboutPage />} />
-      <Route path="/Contact" element={<ContactUs />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactUs />} />
       <Route path="/BlogGrid" element={<BlogGrid />} />
     </Routes>
   );
