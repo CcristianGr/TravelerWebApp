@@ -1,14 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import team1Img from '../../assets/GuidesPics/team-1.jpg'
+import team2Img from '../../assets/GuidesPics/team-2.jpg'
+import team3Img from '../../assets/GuidesPics/team-3.jpg'
+import team4Img from '../../assets/GuidesPics/team-4.jpg'
 library.add(fab)
 
 export const TravGuides = () => {
     const guides = [
-        {idguide:1 ,gPic: "src/assets/GuidesPics/team-1.jpg", gName: "Guide Name", gDesig: "Designation" },
-        {idguide:2 ,gPic: "src/assets/GuidesPics/team-2.jpg", gName: "Guide Name", gDesig: "Designation" },
-        {idguide:3 ,gPic: "src/assets/GuidesPics/team-3.jpg", gName: "Guide Name", gDesig: "Designation" },
-        {idguide:4 ,gPic: "src/assets/GuidesPics/team-4.jpg", gName: "Guide Name", gDesig: "Designation" },
+        {idguide:1 ,gPic: team1Img, gName: "Guide Name", gDesig: "Designation" },
+        {idguide:2 ,gPic: team2Img, gName: "Guide Name", gDesig: "Designation" },
+        {idguide:3 ,gPic: team3Img, gName: "Guide Name", gDesig: "Designation" },
+        {idguide:4 ,gPic: team4Img, gName: "Guide Name", gDesig: "Designation" },
     ]
     return (
         <div className="flex flex-col justify-center items-center mt-10">

@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import blogImg from '../../assets/BodyAssets/blog-100x100.jpg'
+import userImg from '../../assets/BodyAssets/user.jpg'
 
 export const SideBar = () => {
     const categorias = [
@@ -12,9 +14,9 @@ export const SideBar = () => {
     ]
 
     const RecentPost = [
-        {idpost:1 ,img: "src/assets/BodyAssets/blog-100x100.jpg", titlepost: "Diam loren dolore justo eirmod lorem dolore", date: "Jan 01, 2050" },
-        {idpost:2 ,img: "src/assets/BodyAssets/blog-100x100.jpg", titlepost: "Diam loren dolore justo eirmod lorem dolore", date: "Jan 01, 2050" },
-        {idpost:3 ,img: "src/assets/BodyAssets/blog-100x100.jpg", titlepost: "Diam loren dolore justo eirmod lorem dolore", date: "Jan 01, 2050" },
+        {idpost:1 ,img: blogImg, titlepost: "Diam loren dolore justo eirmod lorem dolore", date: "Jan 01, 2050" },
+        {idpost:2 ,img: blogImg, titlepost: "Diam loren dolore justo eirmod lorem dolore", date: "Jan 01, 2050" },
+        {idpost:3 ,img: blogImg, titlepost: "Diam loren dolore justo eirmod lorem dolore", date: "Jan 01, 2050" },
     ]
 
     const tags = [
@@ -31,7 +33,7 @@ export const SideBar = () => {
             {/* User Section */}
             <div className='p-5 bg-white mb-10 flex flex-col justify-center items-center'>
                 <div className='mb-3'>
-                    <img src="src/assets/BodyAssets/user.jpg" alt="" />
+                    <img src={userImg} alt="" />
                 </div>
                 <p className='text-3xl text-primary font-[600] mb-3'>John Doe</p>
                 <p className='text-center text-body-text'>Conset elitr erat vero dolor ipsum et diam, eos dolor lorem, ipsum sit no ut est ipsum erat kasd amet elitr</p>

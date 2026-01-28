@@ -1,3 +1,5 @@
+import blog2Img from '../../assets/BodyAssets/blog-2.jpg'
+
 export const DisplayPost = () => {
     const Post = [
         { idpost:1, day: "01", month: "JAN", who: "ADMIN", title: "TOURS & TRAVEL", description: "Dolor justo sea kasd lorem clita justo diam amet" },
@@ -17,7 +19,7 @@ export const DisplayPost = () => {
                 Post.map((p) => (
                     <div key={p.idpost} className="bg-white w-full h-80">
                         <div className="relative w-full h-50 flex">
-                            <img src="src/assets/BodyAssets/blog-2.jpg" alt="" className="w-full h-full" />
+                            <img src={blog2Img} alt="" className="w-full h-full" />
                             <div className="absolute top-7 bg-primary text-center w-14 -left-4 z-1 p-1 after:absolute after:-top-4 after:left-0
                                     after:content-[''] after:border-[8px] after:border-solid after:border-t-transparent after:border-r-[#5f8f25] after:border-b-[#5f8f25] after:border-l-transparent after:w-0 after:h-0">
                                 <p className="font-[800] text-[13px] h-3 "><strong>{p.day}</strong></p>

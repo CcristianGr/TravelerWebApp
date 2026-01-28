@@ -44,7 +44,7 @@ export const HomePage = () => {
                     bs: "string",
                 }
             }
-        ).then(res => console.log('Respuesta POST:', res))
+        ).then(res => console.log('Respuesta POST:'))
             .catch(err => console.error('Error POST:', err));
     }, []);
 

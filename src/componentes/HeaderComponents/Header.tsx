@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faXTwitter, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { pintarBoton } from "../Hook/HooksGenerals";
 import { HeaderProps } from "../Hook/TypeAtributos/types";
+import carouselImg from '../../assets/HeaderAssets/carousel-2.jpg'
 
 export const Header = ({ params }: HeaderProps) => {
   return (
@@ -42,7 +43,7 @@ export const Header = ({ params }: HeaderProps) => {
         </div>
       </div>
 
-      <div className="relative flex justify-center w-full h-250 bg-[url('/src/assets/HeaderAssets/carousel-2.jpg')] bg-cover" style={{ height: params.rem }}>
+      <div className="relative flex justify-center w-full h-250 bg-cover" style={{ height: params.rem, backgroundImage: `url(${carouselImg})` }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50"></div>
         <div className="relative flex w-full h-full text-center items-center text-white justify-center">
           <div className="flex flex-col w-250">
