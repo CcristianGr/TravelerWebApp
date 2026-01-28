@@ -9,11 +9,11 @@ import { OutOfService } from "./componentes/Pages/OutOfService";
 function App() {
   return (
     <Routes>
-      <Route path="TravelerWebApp/" element={<HomePage />} />
-      <Route path="TravelerWebApp/NoService" element={<OutOfService />} />
-      <Route path="TravelerWebApp/About" element={<AboutPage />} />
-      <Route path="TravelerWebApp/Contact" element={<ContactUs />} />
-      <Route path="TravelerWebApp/BlogGrid" element={<BlogGrid />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/NoService" element={<OutOfService />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactUs />} />
+      <Route path="/BlogGrid" element={<BlogGrid />} />
     </Routes>
   );
 }
