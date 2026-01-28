@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Traveler</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      var pathSegmentsToKeep = 1; // Keep /TravelerWebApp
+      var l = window.location;
+      var basePath = '/TravelerWebApp';
+      
+      // If we're on the base path, redirect to index.html with query string
+      if (l.pathname.startsWith(basePath)) {
+        var pathAfterBase = l.pathname.replace(basePath, '') || '/';
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          basePath + '/index.html?/' + pathAfterBase.slice(1).replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      } else {
+        // Redirect to base path
+        l.replace(basePath + '/');
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
