@@ -34,6 +34,13 @@ jobs:
       - name: Build
         run: npm run build
       
+      - name: Verify dist contents
+        run: |
+          echo "Contents of dist:"
+          ls -la dist/
+          echo "Checking index.html in dist:"
+          cat dist/index.html | grep -E "(src/main|assets/index)" || echo "index.html looks correct"
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
