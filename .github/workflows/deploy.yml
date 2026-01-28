@@ -36,11 +36,22 @@ jobs:
       
       - name: Verify dist contents
         run: |
-          echo "Contents of dist:"
+          echo "=== Contents of dist ==="
           ls -la dist/
-          echo "Checking index.html in dist:"
-          cat dist/index.html | grep -E "(src/main|assets/index)" || echo "index.html looks correct"
-          echo "Full index.html content:"
+          echo ""
+          echo "=== Checking index.html in dist ==="
+          if grep -q "src/main.tsx" dist/index.html; then
+            echo "ERROR: dist/index.html contains src/main.tsx - this is wrong!"
+            exit 1
+          fi
+          if grep -q "TravelerWebApp/assets/index" dist/index.html; then
+            echo "✓ dist/index.html has correct production paths"
+          else
+            echo "ERROR: dist/index.html does not have correct production paths!"
+            exit 1
+          fi
+          echo ""
+          echo "=== Full index.html content ==="
           cat dist/index.html
       
       - name: Setup Pages
