@@ -1,5 +1,5 @@
 import { Header } from "./../HeaderComponents/Header"
-import { getPostActiveCloseArea, postUser } from "../../api/Endpoint"
+import { getPostActiveCloseArea, postUser } from "../../API/Endpoint"
 import { useEffect, useState } from "react";
 import { AboutUs } from "../BodyComponents/AboutUs"
 import { Cards } from "../BodyComponents/Cards";
